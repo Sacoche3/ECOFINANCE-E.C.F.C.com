@@ -133,11 +133,16 @@
                                 count++;
                                 // Créditer 5 % à la première recharge de l'utilisateur
                                 if (!users[uid].commissionCredited) {
-                                    const rechargeAmount = users[uid].balance || 0; // Remplacer par la méthode de recharge
+                                    const rechargeAmount = users[uid].balance || 0; // Remplacez par la méthode de recharge appropriée
                                     const commission = rechargeAmount * 0.05;
-                                    // Mise à jour du solde de commission
+                                    
+                                    // Mise à jour du solde de commission du parrain
                                     await update(userRef, {
                                         commissionBalance: commissionBalance + commission,
+                                    });
+                                    
+                                    // Marquer que la commission a été créditée pour le filleul
+                                    await update(ref(database, 'users/' + uid), {
                                         commissionCredited: true
                                     });
                                 }
