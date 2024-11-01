@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Solde</title>
     <style>
-        /* Styles de la page */
+        /* Les styles restent identiques */
         body {
             font-family: Arial, sans-serif;
-            background-color: #FFFFFF; /* Couleur de fond blanc */
+            background-color: #FFFFFF;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -18,23 +18,21 @@
             color: #333;
         }
 
-        /* Section pour afficher l'email */
         .email-section {
-            background-color: #FFFFFF; /* Couleur de fond blanc */
-            color: #333; /* Couleur du texte noir */
+            background-color: #FFFFFF;
+            color: #333;
             font-size: 20px;
             padding: 15px;
             border-radius: 8px;
             text-align: center;
             width: 80%;
             max-width: 400px;
-            margin-bottom: 20px; /* Espace entre l'email et le solde */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Section pour le groupe Telegram */
         .telegram-section {
-            background-color: #007BFF; /* Couleur de fond bleu */
+            background-color: #007BFF;
             color: white;
             font-size: 20px;
             padding: 15px;
@@ -42,26 +40,24 @@
             text-align: center;
             width: 80%;
             max-width: 400px;
-            margin-bottom: 20px; /* Espace entre le groupe Telegram et le solde */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Section carrée pour Ecobank */
-.ecobank-section {
-    background-color: #FFFFFF; /* Couleur de fond blanc */
-    border: 1px solid #007BFF; /* Bordure bleue */
-    border-radius: 8px;
-    width: 70%; /* Ajustez la largeur */
-    max-width: 300px; /* Limitez la largeur maximale */
-    height: 200px; /* Hauteur de la section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Espace entre Ecobank et le solde */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
+        .ecobank-section {
+            background-color: #FFFFFF;
+            border: 1px solid #007BFF;
+            border-radius: 8px;
+            width: 70%;
+            max-width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-        /* Conteneur de la section solde */
         .balance-container {
             background-color: #ffffff;
             border-radius: 8px;
@@ -70,12 +66,11 @@
             padding: 20px;
             width: 95%;
             max-width: 400px;
-            margin-bottom: 80px; /* Espace pour les boutons en bas */
+            margin-bottom: 80px;
         }
 
-        /* Section de solde */
         .balance-header {
-            background-color: #007BFF; /* Couleur de fond bleu */
+            background-color: #007BFF;
             color: white;
             font-size: 20px;
             padding: 15px;
@@ -89,7 +84,6 @@
             color: #555;
         }
 
-        /* Boutons en bas de la page */
         .footer-buttons {
             position: fixed;
             bottom: 10px;
@@ -102,9 +96,8 @@
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Style des boutons principaux */
         .footer-buttons button {
-            background-color: #007BFF; /* Couleur bleu */
+            background-color: #007BFF;
             color: white;
             border: none;
             padding: 8px 10px;
@@ -114,22 +107,20 @@
             height: 35px;
         }
 
-        /* Bouton central rond */
         .footer-buttons .btn-center {
-            background-color: #FF0000; /* Couleur rouge */
+            background-color: #FF0000;
             border-radius: 50%;
             width: 50px;
             height: 50px;
         }
 
-        /* Section d'options (Recharge, Retrait, Historique) */
         .popup-section {
             display: none;
             position: fixed;
             bottom: 80px;
             width: 80%;
             max-width: 400px;
-            background-color: #007BFF; /* Couleur de fond bleu */
+            background-color: #007BFF;
             color: white;
             padding: 20px;
             border-radius: 8px;
@@ -138,8 +129,8 @@
         }
 
         .popup-section button {
-            background-color: #FFF; /* Boutons blancs */
-            color: #007BFF; /* Texte bleu */
+            background-color: #FFF;
+            color: #007BFF;
             border: none;
             border-radius: 8px;
             padding: 10px 15px;
@@ -151,43 +142,29 @@
 </head>
 <body>
 
-<!-- Section pour afficher l'email -->
 <div class="email-section" id="email">Chargement de l'email...</div>
 
-<!-- Section pour le groupe Telegram -->
 <div class="telegram-section">
     <h3>Groupe officiel Telegram</h3>
     <a href="https://t.me/+E0fjkVdDiTFhYTI8" style="color: white;">Rejoignez notre groupe</a>
 </div>
 
-<!-- Section carrée pour Ecobank -->
 <div class="ecobank-section">
     <h3>Ecobank</h3>
 </div>
 
-<!-- Conteneur pour le solde -->
 <div class="balance-container">
     <div class="balance-header">Votre Solde</div>
     <div class="balance-info" id="balance">Chargement...</div>
 </div>
 
-<!-- Section popup pour les options Recharge, Retrait, Historique -->
 <div id="popup-section" class="popup-section">
-    
-
     <a href="recharge.html"><button>Recharge</button></a>
     <a href="retrait.html"><button>Retrait</button></a>
-  
-    <a href="lier_portefeuille.html"><button>compte</button>
-    
+    <a href="lier_portefeuille.html"><button>compte</button></a>
     <a href="historique.html"><button>Historique</button></a>
-    
-    <a href="star.html"><button>Stastique</button>
-    
+    <a href="star.html"><button>Stastique</button></a>
 </div>
-
-
-<!-- Boutons en bas de la page -->
 
 <div class="footer-buttons">
     <a href="balance.html"><button>Dashbo</button></a>
@@ -197,11 +174,10 @@
     <a href="equipe.html"><button>Équipe</button></a>
 </div>
 
-<!-- Script Firebase et fonction togglePopup -->
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-    import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+    import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { getDatabase, ref, set, get, onValue } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
     const firebaseConfig = {
         apiKey: "AIzaSyCPQvlxIjvJPkMZQ4qElkHla_xQ5QiZfFs",
@@ -217,41 +193,68 @@
     const auth = getAuth(app);
     const database = getDatabase(app);
 
-    auth.onAuthStateChanged(async (user) => {
-        if (user) {
-            const userRef = ref(database, 'users/' + user.uid);
-            const snapshot = await get(userRef);
-            if (snapshot.exists()) {
-                const userData = snapshot.val();
-                // Convertir le solde en nombre avec deux décimales
-                const balance = parseFloat(userData.balance).toFixed(2);
-                document.getElementById("balance").innerText = balance + " FCFA";
-                document.getElementById("email").innerText = user.email; // Affiche l'email de l'utilisateur
-            } else {
-                document.getElementById("balance").innerText = "Aucun solde trouvé.";
-            }
-        } else {
-            document.getElementById("balance").innerText = "Veuillez vous connecter.";
-        }
-    });
-</script>
-
-<script>
-    // Fonction pour basculer l'affichage de la section popup
-    function togglePopup() {
-        const popup = document.getElementById("popup-section");
-        if (popup.style.display === "none" || popup.style.display === "") {
-            popup.style.display = "block"; // Afficher le popup
-        } else {
-            popup.style.display = "none"; // Masquer le popup
+    // Fonction pour initialiser un nouveau compte utilisateur avec 200F
+    async function initializeUserAccount(user) {
+        const userRef = ref(database, 'users/' + user.uid);
+        
+        // Vérifier si l'utilisateur existe déjà
+        const snapshot = await get(userRef);
+        if (!snapshot.exists()) {
+            // Si c'est un nouvel utilisateur, initialiser son compte avec 200F
+            await set(userRef, {
+                email: user.email,
+                balance: 200,
+                createdAt: new Date().toISOString()
+            });
+            console.log("Nouveau compte créé avec 200F");
         }
     }
 
-    // Masquer le popup au chargement de la page
-    document.addEventListener("DOMContentLoaded", function() {
+    // Écouter les changements d'état de connexion
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            // Mettre à jour l'affichage de l'email
+            document.getElementById("email").innerText = user.email;
+
+            // Initialiser le compte si nécessaire
+            await initializeUserAccount(user);
+
+            // Écouter les changements de solde
+            const userRef = ref(database, 'users/' + user.uid);
+            onValue(userRef, (snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+                    document.getElementById("balance").innerText = `${userData.balance} FCFA`;
+                }
+            });
+        } else {
+            document.getElementById("balance").innerText = "Veuillez vous connecter";
+            document.getElementById("email").innerText = "Non connecté";
+        }
+    });
+
+    // Exposer la fonction de création de compte pour l'utiliser depuis le formulaire d'inscription
+    window.createAccount = async function(email, password) {
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            // L'initialisation du compte se fera automatiquement via onAuthStateChanged
+        } catch (error) {
+            console.error("Erreur lors de la création du compte:", error);
+            throw error;
+        }
+    }
+</script>
+
+<script>
+    function togglePopup() {
         const popup = document.getElementById("popup-section");
-        popup.style.display = "none"; // Masquer le popup au départ
+        popup.style.display = popup.style.display === "none" || popup.style.display === "" ? "block" : "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("popup-section").style.display = "none";
     });
 </script>
+
 </body>
 </html>
