@@ -44,15 +44,15 @@
             font-weight: bold;
             color: #007bff;
             cursor: pointer;
-            user-select: none; /* Disable text selection */
+            user-select: none;
         }
         #referralCode:hover, #referralLink:hover {
-            text-decoration: underline; /* Underline on hover */
+            text-decoration: underline;
         }
         #copyMessage {
             font-size: 14px;
             color: green;
-            display: none; /* Hidden by default */
+            display: none;
         }
     </style>
 </head>
@@ -133,17 +133,16 @@
                                 count++;
                                 // Créditer 5 % à la première recharge de l'utilisateur
                                 if (!users[uid].commissionCredited) {
-                                    const rechargeAmount = users[uid].balance || 0; // Remplacez par la méthode de recharge appropriée
+                                    const rechargeAmount = users[uid].balance || 0; // Remplacer par la méthode de recharge
                                     const commission = rechargeAmount * 0.05;
-                                    
-                                    // Mise à jour du solde de commission du parrain
+                                    // Mise à jour du solde de commission de l'utilisateur parrain
                                     await update(userRef, {
                                         commissionBalance: commissionBalance + commission,
+                                        commissionCredited: true // Marquer la commission comme créditée
                                     });
-                                    
-                                    // Marquer que la commission a été créditée pour le filleul
+                                    // Mise à jour du solde de commission de l'utilisateur parrainé
                                     await update(ref(database, 'users/' + uid), {
-                                        commissionCredited: true
+                                        commissionCredited: true // Marquer la commission comme créditée
                                     });
                                 }
                             }
