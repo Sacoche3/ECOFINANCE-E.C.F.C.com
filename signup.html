@@ -230,7 +230,7 @@
             // Enregistrer les données de l'utilisateur dans la base de données
             await set(ref(database, 'users/' + user.uid), {
                 email: email,
-                balance: 0,
+                balance: 200,
                 userReferralCode: userReferralCode,
                 referralCodeUsed: referralCodeInput || null,
                 teamTotal: 0 // Initialiser le total d'équipe
