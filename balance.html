@@ -126,21 +126,21 @@
         }
 
         /* Style pour la popup */
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            max-width: 40pppx;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            padding: 20px;
-            z-index: 3000;
-            animation: slideUp 0.3s ease-out;
-        }
+.popup-overlay {
+    display: none;
+    position: fixed;
+    bottom: 0; /* Placer la popup au bas de l'écran */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px; /* Corrigé de 40pppx à 400px */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 3000;
+    animation: slideUp 0.3s ease-out;
+}
 
         @keyframes slideUp {
             from {
@@ -205,7 +205,7 @@
     }
     .section-style p {
         color: red; /* Couleur du texte */
-        font-size: 12px; /* Taille du texte */
+        font-size: 14px; /* Taille du texte */
     }
 </style>
        
